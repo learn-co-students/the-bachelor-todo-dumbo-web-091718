@@ -1,3 +1,4 @@
+##Get Winners
 def get_first_name_of_season_winner(data, season)
     data[season].each do |actor| 
     if actor["status"] == "Winner"
@@ -11,7 +12,7 @@ def get_first_name_of_season_winner(data, season)
 end
 
 
-
+#Get Contestants Names Based on Occupation 
 def get_contestant_name(data, occupation)
     data.each do | season, details|
     details.each do |actor|
@@ -22,16 +23,21 @@ def get_contestant_name(data, occupation)
  end
 end 
 
-
+#Get Contestants By Hometown 
 def count_contestants_by_hometown(data, hometown)
   # code here
-  data.each do |season, details|
-    details.each do |actor|
+    numb_of_actors_by_homewtown = 0
+    data.each do |season, details|
+      details.each do |actor|
       if actor["hometown"] == hometown
-        
+       numb_of_actors_by_homewtown += 1
+      end 
+    end
   end 
+return numb_of_actors_by_homewtown
 end
 
+#Get Contestants Occupations
 def get_occupation(data, hometown)
   # code here
 end
