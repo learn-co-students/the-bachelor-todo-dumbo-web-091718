@@ -1,5 +1,14 @@
+require 'pry'
+
+didyouwin = nil
 def get_first_name_of_season_winner(data, season)
-  # code here
+  data[season].each do |key|
+
+    key.each do |attribute, value|
+      if value == "Winner"
+      end
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
